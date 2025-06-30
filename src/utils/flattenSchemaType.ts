@@ -1,5 +1,5 @@
 import {
-  isDocumentSchemaType,
+  isObjectSchemaType,
   type ObjectField,
   type Path,
   type SchemaType,
@@ -13,8 +13,8 @@ type ObjectFieldWithPath = ObjectField<SchemaType> & {path: Path}
 export function flattenSchemaType(
   schemaType: SchemaType
 ): ObjectFieldWithPath[] {
-  if (!isDocumentSchemaType(schemaType)) {
-    console.error(`Schema type is not a document`)
+  if (!isObjectSchemaType(schemaType)) {
+    console.error(`Schema type is not an object`)
     return []
   }
 

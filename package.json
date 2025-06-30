@@ -36,12 +36,12 @@
     "v2-incompatible.js"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "pkg build --strict --check --clean",
     "format": "prettier --write --cache --ignore-unknown .",
     "link-watch": "plugin-kit link-watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install",
     "prepublishOnly": "run-s build",
     "watch": "pkg-utils watch --strict"
   },
